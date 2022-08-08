@@ -1,0 +1,57 @@
+$primaryColor: #003087;
+$primaryColor2: #1264AF;
+$secondaryColor: #4688F1;
+$secondaryColor2: #216EE9;
+$tertiaryColor: #FF0000;
+$complimentaryColor: #A3A0BC;
+$complimentaryColor2: #736FA1;
+$textColor: #1A1919;
+$btnColor: #16CCA0;
+$btnColorHover: #16CC75;
+$tooltipColor: #B956E7;
+$bgColor: #f2f2f2;
+
+$lightGrey: #f4f4f4;
+$darkGrey: grey;
+
+$dropdown-color: $primaryColor;
+$dropdown-border-color: $complimentaryColor;
+$dropdown-color-hover: $complimentaryColor;
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-fast {
+  transition: all 0.2s ease-out;
+}
+
+@mixin transition-smooth {
+  transition: all 0.5s ease;
+}
+
+@mixin media-sm {
+  @media screen and (min-width: 500px){
+      @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 768px){
+      @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px){
+      @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1440px){
+      @content;
+  }
+}
+@mixin media-xxl {
+  @media screen and (min-width: 1920px){
+      @content;
+  }
+}
