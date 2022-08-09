@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 const useWindowDimension = () => {
     const [width, setWidth] = useState(undefined);
     const [height, setHeight] = useState(undefined);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -14,6 +15,17 @@ const useWindowDimension = () => {
             window.removeEventListener('resize', handleResize);
         }
     });
+
+    useEffect(() => {
+        if (loaded) {
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        }
+    }, [loaded])
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
   
     return {width, height};
 }

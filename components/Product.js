@@ -51,7 +51,10 @@ export default function Product({ id, title, subtitle, pack, unitPrice, totalPri
                 </div>
                 <div className={styles['product-price']}>
                   <p className={styles['product-price__title']}>PRICE</p>
-                  <p className={styles['product-price__amount']}><span className={styles['amount']}>{unitPrice}</span> <span className={styles['pack']}>per BOX</span></p>
+                  <p className={styles['product-price__amount']}>
+                    <span className={styles['amount']}>{unitPrice}</span>
+                    <span className={styles['pack']}>per BOX</span>
+                  </p>
                 </div>
               </div>
 
