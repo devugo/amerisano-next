@@ -100,7 +100,6 @@
             background-color: mixin.$bgColor;
             display: flex;
             flex-direction: column;
-            // padding-bottom: 10px;
             &__title {
               order: 1;
               display: flex;
@@ -445,6 +444,197 @@
           .top {
             .product-price {
               padding-right: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.amerisano-modal {
+  .features-container {
+    display: block;
+    overflow-y: auto;
+    @include mixin.transition-ease;
+    .modal-header {
+      background: mixin.$primaryColor2;
+      border-radius: 10px 10px 0px 0px;
+      height: 48px;
+      margin-bottom: 9px;
+      align-items: center;
+      padding: 13px;
+
+      .close-icon {
+        float: right;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+  
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    .container {
+      .main-content {
+        background: white;
+        padding: 0px 20px 20px 20px;
+        &-sub {
+          padding-bottom: 5px;
+          border-bottom: 1px solid mixin.$complimentaryColor;
+          .header {
+            display: flex;
+
+            &-title {
+              margin-left: 16px;
+              margin-top: 16px;
+              h4 {
+                font-size: 16px;
+                color: mixin.$primaryColor;
+                font-weight: 700;
+                line-height: 19px;
+                margin-bottom: 8px;
+              }
+              p {
+                font-family: Roboto;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 15px;
+                color: mixin.$secondaryColor;
+              }
+            }
+          }
+          p.pack {
+            color: mixin.$secondaryColor;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+      }
+    
+      .features-container{
+        border-radius: 0px 0px 10px 10px;
+        background-color: white;
+        .header-title {
+          display: none;
+        }
+        .features {
+          background: white;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          padding: 0 20px 40px 20px;
+
+          .feature {
+            display: flex;
+            margin-bottom: 12px;
+            align-items: flex-start;
+
+            span {
+              font-size: 16px;
+              color: mixin.$secondaryColor;
+              font-weight: 500;
+              font-family: Roboto;
+              line-height: 20px;
+
+              &:first-child {
+                width: 15px;
+                height: 15px;
+              }
+            }
+
+            .feature-text {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixin.media-lg {
+  .amerisano-modal {
+    .features-container {
+      background: white;
+      border-radius: 0 10px 0 0;
+      .modal-header {
+        background: none;
+        margin-bottom: 0px;
+        padding: 0;
+  
+        .close-icon {
+          border-radius: 0 10px 0 0;
+          width: 50px;
+          height: 50px;
+          background-color: mixin.$primaryColor2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .container {
+        display: flex;
+        width: 100%;
+      
+        .main-content {
+          background: none;
+          width: 30%;
+          &-sub {
+            border: none;
+            .header {
+    
+              &-title {
+                display: none;
+              }
+            }
+            p.pack {
+              display: none;
+            }
+          }
+        }
+      
+        .features-container{
+          border-radius: none;
+          
+          width: 70%;
+          .header-title {
+            display: block;
+            padding: 0 20px 0 20px;
+
+            h4 {
+              color: mixin.$primaryColor;
+              font-weight: 700;
+              font-size: 28px;
+              margin-bottom: 2px;
+            }
+
+            p {
+              color: mixin.$secondaryColor;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 22px;
+              margin-bottom: 0px;
+              font-family: Roboto;
+
+              &.pack {
+                font-weight: 700;
+                line-height: 29px;
+              }
+            }
+          }
+          .features {
+            margin-top: 30px;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+    
+            .feature {
+              width: 49%;
+              margin-right: 0.5%;
             }
           }
         }
